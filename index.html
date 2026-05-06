@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DILLY FASHION SHOP</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1 {
+  margin: 0;
+}
+
+.tagline {
+  color: gray;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 260px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #444;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: white;
+  margin-top: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <h1>DILLY FASHION SHOP</h1>
+  <p class="tagline">CHEAPEST, AFFORDABLE, COMFORT</p>
+</header>
+
+<section class="products">
+
+  <!-- Product 1 -->
+  <div class="card">
+    <img src="https://i.ibb.co/LdVqZKsF/IMG-20260506-064502.png">
+    <h3>Stylish Casual Wear</h3>
+    <p>Comfortable daily wear, perfect for every occasion.</p>
+    <div class="price">₹399</div>
+    <button onclick="orderNow('Stylish Casual Wear')">Order Now</button>
+  </div>
+
+  <!-- Product 2 -->
+  <div class="card">
+    <img src="https://i.ibb.co/v4FMXwWP/IMG-20260506-064525.png">
+    <h3>Premium Fashion Outfit</h3>
+    <p>Trendy and affordable fashion for modern style.</p>
+    <div class="price">₹399</div>
+    <button onclick="orderNow('Premium Fashion Outfit')">Order Now</button>
+  </div>
+
+</section>
+
+<footer>
+  <p>Contact: lalitbhai4004@gmail.com</p>
+</footer>
+
+<script>
+function orderNow(product) {
+  let email = "lalitbhai4004@gmail.com";
+  let subject = "Order Request - " + product;
+  let body = "I want to order: " + product;
+
+  window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+}
+</script>
+
+</body>
+  </html>
